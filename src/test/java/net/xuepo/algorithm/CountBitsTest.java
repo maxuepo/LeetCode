@@ -14,8 +14,6 @@ public class CountBitsTest {
 
     @Test
     public void testCountBits() throws Exception {
-        int[] expected_2 = {0,1,1};
-
         CountBits instance = new CountBits();
         int[] res_10 = instance.countBits(10);
         int[] res_2  = instance.countBits(2);
