@@ -15,3 +15,16 @@ Space complexity should be O(n).
 # Solution
 
 To be updated.
+
+
+# Code
+
+```java
+    public int[] countBits(int num) {
+        int[] res = new int[num + 1];
+        for (int i = 1; i <= num; i++) {
+            res[i] = i % 2 + res[i/2];
+        }
+        return res;
+    }
+```
