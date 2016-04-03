@@ -1,5 +1,5 @@
 # Introduction
-This is the repository for my leetcode solution.
+This is the repository for my leetcode solutions.
 
 
 | problems     | difficulty level    | links |
