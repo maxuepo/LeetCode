@@ -6,7 +6,7 @@ import static org.testng.Assert.*;
 
 /**
  * Created by xuepo on 4/3/16.
- * As the solution passed LeetCode, only two test cases created for debugging purpose.
+ * As the solution passed LeetCode OJ, only two test cases created for debugging purpose.
  */
 public class CountBitsTest {
     int[] expected_2 = {0,1,1};
