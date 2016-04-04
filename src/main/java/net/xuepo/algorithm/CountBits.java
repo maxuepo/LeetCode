@@ -2,14 +2,9 @@ package net.xuepo.algorithm;
 
 /**
  * Created by xuepo on 4/3/16.
- *
- * Statement:
- * Given a non negative integer number num.
- * For every numbers i in the range 0 ≤ i ≤ num calculate
- * the number of 1's in their binary representation and
- * return them as an array.
- *
+ * docs: https://github.com/maxuepo/leetcode/blob/master/docs/count_bits.md
  */
+
 public class CountBits {
     public int[] countBits(int num) {
         int[] res = new int[num + 1];
