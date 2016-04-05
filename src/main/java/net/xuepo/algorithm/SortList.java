@@ -4,12 +4,6 @@ package net.xuepo.algorithm;
  * Created by xuepo on 4/3/16.
  */
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
-}
-
 public class SortList {
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) return head;
