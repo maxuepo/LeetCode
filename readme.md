@@ -11,3 +11,4 @@ This is the repository for my leetcode solutions.
 | Sort List  | Medium   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/sort_list.md)   | None |
 | Zigzag Conversion | Medium   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/zigzag_conversion.md)   | None |
 | Multiply String | Medium   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/multiply_string.md)   | None |
+| Count Of Smaller Numbers After Self | Medium   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/count_of_smaller_numbers_after_self.md)   | None |
