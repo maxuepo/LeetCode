@@ -9,12 +9,11 @@ import static org.testng.Assert.*;
  *
  * As the solution passed LeetCode OJ, only one test case created for debugging purpose.
  */
-public class RemoveDuplicateLettersTest {
+public class RemoveDuplicateLettersTest extends RemoveDuplicateLetters {
 
     @Test
     public void testRemoveDuplicateLetters() throws Exception {
-        RemoveDuplicateLetters instance = new RemoveDuplicateLetters();
-        String out = instance.removeDuplicateLetters("bcabc");
+        String out = removeDuplicateLetters("bcabc");
         assertEquals("abc", out);
     }
 

@@ -9,11 +9,10 @@ import static org.testng.Assert.*;
  *  As the solution passed LeetCode OJ, only one test case created for debugging purpose.
  *
  */
-public class ZigZagConversionTest {
+public class ZigZagConversionTest extends ZigZagConversion {
     @Test
     public void testConvert() throws Exception {
-        ZigZagConversion instance = new ZigZagConversion();
-        String res = instance.convert("PAYPALISHIRING", 3);
+        String res = convert("PAYPALISHIRING", 3);
         assertEquals(res, "PAHNAPLSIIGYIR");
     }
 

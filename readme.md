@@ -5,8 +5,9 @@ This is the repository for my leetcode solutions.
 # Solutions
 | problems     | Difficulty | My Solution Docs | Note |
 | --------|---------|-------|-------|
-| CountBits  | Easy   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/count_bits.md)   | None |
-| RemoveDuplicateLetters  | Hard   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/remove_duplicate_letters.md)   | None |
+| Count Bits  | Easy   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/count_bits.md)   | None |
+| Remove Duplicate Letters  | Hard   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/remove_duplicate_letters.md)   | None |
 | Number of Digit One  | Hard   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/number_of_digit_one.md)   | None |
 | Sort List  | Medium   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/sort_list.md)   | None |
-| ZigZagConversion | Medium   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/zigzag_conversion.md)   | None |
+| Zigzag Conversion | Medium   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/zigzag_conversion.md)   | None |
+| Multiply String | Medium   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/multiply_string.md)   | None |

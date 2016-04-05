@@ -8,7 +8,7 @@ import static org.testng.Assert.*;
  * Created by xuepo on 4/3/16.
  * As the solution passed LeetCode OJ, only one test case created for debugging purpose.
  */
-public class SortListTest {
+public class SortListTest extends SortList {
 
     @Test
     public void testSortList() throws Exception {
@@ -18,8 +18,7 @@ public class SortListTest {
         curr = curr.next;
         curr.next = new ListNode(5);
 
-        SortList instance = new SortList();
-        ListNode res = instance.sortList(head);
+        ListNode res = sortList(head);
 
         int[] target = {2, 4, 5};
         for (int i = 0; i < 3; i++) {
