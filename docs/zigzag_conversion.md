@@ -13,12 +13,7 @@ convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
 Subscribe to see which companies asked this question.
 
 # Solution
-
-Find index map.
-
-P <--- 2 * numRows - 2 --->  A  <--- 2 * numRows - 2 ---> H  <--- 2 * numRows - 2 --->  N
-A <--- 2 * numRows - 2 - 2 * i ---> P ...
-
+Find index mapping.
 
 # Code
 
