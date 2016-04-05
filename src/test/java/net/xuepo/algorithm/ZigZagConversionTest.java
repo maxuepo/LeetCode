@@ -13,7 +13,7 @@ public class ZigZagConversionTest {
     @Test
     public void testConvert() throws Exception {
         ZigZagConversion instance = new ZigZagConversion();
-        String res = instance.convert("PAYPALISHIRING", 4);
+        String res = instance.convert("PAYPALISHIRING", 3);
         assertEquals(res, "PAHNAPLSIIGYIR");
     }
 
