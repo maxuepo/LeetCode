@@ -13,17 +13,9 @@ import static org.testng.Assert.*;
 public class IdleMachineTimeTest extends IdleMachineTime {
     @Test
     public void testGetIdelIntervals() throws Exception {
-
         List<Interval> input = new ArrayList<>();
-
-
         input.add(new Interval(3,4));
-
-
         List<Interval> output = this.getIdelIntervals(input);
-
         System.out.println(output);
-
     }
-
 }
