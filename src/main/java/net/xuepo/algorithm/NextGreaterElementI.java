@@ -4,7 +4,6 @@ package net.xuepo.algorithm;
  * Created by xuepo on 2/8/17.
  */
 public class NextGreaterElementI {
-
     //TODO: find a more efficient algorithm.
     public int[] nextGreaterElement(int[] findNums, int[] nums) {
         int[] res = new int[findNums.length];
