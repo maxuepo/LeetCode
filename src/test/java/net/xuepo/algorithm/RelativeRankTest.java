@@ -2,8 +2,6 @@ package net.xuepo.algorithm;
 
 import org.junit.Assert;
 import org.testng.annotations.Test;
-import java.util.Arrays;
-import static org.testng.Assert.*;
 
 /**
  * Created by xuepo on 2/8/17.
