@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
  * Created by xuepo on 2/8/17.
  */
 public class RelativeRankTest extends RelativeRank {
-
     @Test
     public void testFindRelativeRanks() {
         int[] nums01 = {5, 4, 3, 2, 1};
