@@ -1,7 +1,4 @@
 .classpath
-.gradle/3.3
-.idea/*
-build/*
 .gradle/
 .idea/
 build/
