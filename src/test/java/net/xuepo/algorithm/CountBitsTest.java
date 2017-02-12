@@ -11,7 +11,7 @@ import static org.testng.Assert.*;
 public class CountBitsTest extends CountBits {
     int[] expected_2 = {0,1,1};
     int[] expected_10 = {0,1,1,2,1,2,2,3,1,2,2};
-    
+
     @Test
     public void testCountBits() throws Exception {
         int[] res_10 = countBits(10);
@@ -19,5 +19,4 @@ public class CountBitsTest extends CountBits {
         assertTrue(Arrays.equals(res_2, expected_2));
         assertTrue(Arrays.equals(res_10, expected_10));
     }
-
 }
