@@ -11,14 +11,7 @@ import java.util.List;
 public class ExpressionAddOperatorsTest extends ExpressionAddOperators{
     @Test
     public void testAddOperators() throws Exception {
-
-
         List<String> res = addOperators("232", 8);
-
-
         System.out.println(res);
-
-
     }
-
 }
