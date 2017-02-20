@@ -8,6 +8,7 @@ import java.util.Arrays;
  * Now you have 2 symbols + and -. For each integer, you should choose one from + and - as its new symbol.
  * Find out how many ways to assign symbols to make sum of integers equal to target S.
  */
+// TODO: This is a brutal force solutions. Computation complexity, O(2^n); Try to come up with some smarter solution.
 public class TargetSum {
     private int count = 0;
 
