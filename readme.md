@@ -13,3 +13,4 @@ This is the repository for my leetcode solutions.
 | Multiply String | Medium   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/multiply_string.md)   | None |
 | Count Of Smaller Numbers After Self | Hard   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/count_of_smaller_numbers_after_self.md)   | yet to complete |
 | Range Sum Query - Mutable | Hard   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/range_sum_query_mutable.md)   | need to update solution details |
+| Base7 | Easy   | [Solution Link](https://github.com/maxuepo/leetcode/blob/master/docs/base_7.md)   | need to update solution details |
