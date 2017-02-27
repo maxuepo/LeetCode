@@ -18,56 +18,49 @@ public class EvaluateDivision {
           return [6.0, 0.5, -1.0, 1.0, -1.0 ].
      */
     public double[] calcEquation(String[][] equations, double[] values, String[][] queries) {
-        int m = equations.length;
-        Map<String, Double> mp = new HashMap<>();
-        Set<String> set = new HashSet<>();
-
-        for(int i = 0; i < equations.length; i++) {
-
-            mp.put(equations[i][0] + equations[i][1], values[i]);
-            mp.put(equations[i][1] + equations[i][0], 1 / values[i]);
-            set.add(equations[i][0]);
-            set.add(equations[i][1]);
-
-        }
-        for(int i = 0; i < m - 1; i++) {
-            for(int j = i + 1; j < m; j++) {
-                if(equations[i][0].equals(equations[j][0])) {
-                    mp.put(equations[i][1] + equations[j][1], values[j] / values[i]);
-                    mp.put(equations[j][1] + equations[i][1], values[i] / values[j]);
-                }
-
-                if(equations[i][0].equals(equations[j][1])) {
-                    mp.put(equations[i][1] + equations[j][0], values[j] * values[i]);
-                    mp.put(equations[j][0] + equations[i][1], 1 / (values[i] * values[j]));
-                }
-
-                if(equations[i][1].equals(equations[j][0])) {
-                    mp.put(equations[i][0] + equations[j][1], values[i] * values[j]);
-                    mp.put(equations[j][1] + equations[i][0], 1 / (values[j] / values[i]));
-                }
-
-                if(equations[i][1].equals(equations[j][1])) {
-                    mp.put(equations[i][0] + equations[j][0], values[i] / values[j]);
-                    mp.put(equations[j][0] + equations[i][0], values[i] / values[j]);
-                }
-            }
+        Map<String, Map<String, Double>> numMap = new HashMap<>();
+        int i = 0;
+        for(String[] entry : equations) {
+            updateMap(numMap, entry[0], entry[1], values[i]);
+            updateMap(numMap, entry[1], entry[0], 1 / values[i]);
+            i++;
         }
 
         int n = queries.length;
-        double[] res = new double[n];
-        int index = 0;
-        for(String[] entry : queries) {
-            String temp = entry[0] + entry[1];
-            if(mp.containsKey(temp)){
-                res[index] = mp.get(temp);
-            } else if (entry[0].equals(entry[1]) && set.contains(entry[0])){
-                res[index] = 1.0;
-            } else {
-                res[index] = -1.0;
-            }
-            index++;
+        double[] resArray = new double[n];
+        i = 0;
+        for(String[] query : queries) {
+            Double res = handleQuery(query[0], query[1], numMap, new HashSet<>());
+            resArray[i] = res == null ? -1.0 : res;
+            i++;
         }
-        return res;
+
+        return resArray;
+    }
+
+    private void updateMap(Map<String, Map<String, Double>> numMap, String num, String denom, double value) {
+        Map<String, Double> denomMap = numMap.get(num);
+        if(denomMap == null) {
+            denomMap = new HashMap<>();
+            numMap.put(num, denomMap);
+        }
+        denomMap.put(denom, value);
+    }
+
+    private Double handleQuery(String num, String denom, Map<String, Map<String, Double>> numMap, Set<String> visitedSet) {
+        String numKey = num + ":" + denom;
+        if(visitedSet.contains(numKey)) return null;
+        if(!numMap.containsKey(num) || !numMap.containsKey(denom)) return null;
+        if(num.equals(denom)) return 1.0;
+        Map<String, Double> denomMap = numMap.get(num);
+        visitedSet.add(numKey);
+        for(String key : denomMap.keySet()) {
+            Double res = handleQuery(key, denom, numMap, visitedSet);
+            if(res != null) {
+                return denomMap.get(key) * res;
+            }
+        }
+        visitedSet.remove(numKey);
+        return null;
     }
 }
