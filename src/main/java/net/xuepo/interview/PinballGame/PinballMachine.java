@@ -26,4 +26,16 @@ public class PinballMachine {
         this.bonus += _BONUS;
     }
 
+    public int getScore() {
+        return this.score;
+    }
+
+    public int getBonus() {
+        return this.bonus;
+    }
+
+    public void disPlayScoreAndBonus() {
+        System.out.println("bonus： " + bonus + "; score: " + score );
+    }
+
 }
