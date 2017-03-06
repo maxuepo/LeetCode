@@ -37,5 +37,4 @@ public class PinballMachine {
     public void disPlayScoreAndBonus() {
         System.out.println("bonus： " + bonus + "; score: " + score );
     }
-
 }
