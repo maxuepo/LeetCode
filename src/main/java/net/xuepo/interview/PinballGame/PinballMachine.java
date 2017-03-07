@@ -10,11 +10,16 @@ public class PinballMachine {
     public static final int _SCORE = 100;
     public static final int _BONUS = 100;
 
-    public static final PinballMachine instance = new PinballMachine();
+    public static PinballMachine instance = null;
 
     private PinballMachine() {}
 
     public static PinballMachine getInstance() {
+        synchronized (PinballMachine.class) {
+            if(instance == null) {
+                instance = new PinballMachine();
+            }
+        }
         return instance;
     }
 
