@@ -5,28 +5,24 @@ package net.xuepo.algorithm;
  * Created by xuepo on 3/5/17.
  */
 public class IntegerReplacement {
-
     public int integerReplacement(int n) {
 
-        int[] dp = new int[n];
+        if(n == Integer.MAX_VALUE) return 32;
 
-        dp[0] = 0;
-        dp[1] = 1;
+        int count = 0;
+        while(n > 1) {
 
-
-        for(int i = 0; i < n; i++) {
-
-
-
-
-
-
+            if(n % 2 == 0) {
+                n /= 2;
+            } else {
+                if((n + 1) % 4 == 0 && (n - 1) != 2) {
+                    n++;
+                } else {
+                    n--;
+                }
+            }
+            count++;
         }
-
-
-
-
-
+        return count;
     }
-
 }
